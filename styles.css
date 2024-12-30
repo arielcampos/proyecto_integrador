@@ -1,0 +1,145 @@
+.header {
+    width: 100%;
+    background-color: whitesmoke;
+    height: 90px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;/* Para que este arriba del resto*/
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 8px 0;
+
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    font-weight: normal;
+}
+
+.nav ul {
+    list-style: none; /*remueve los puntos*/
+    display: flex;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    flex-wrap: wrap; /*ajusta el menu, pero se baja y se mezcla con la imagen*/
+}
+
+li {
+    padding: 0 20px;
+}
+
+.boton {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 0px 20px;
+    margin-left: 20px;
+    border-radius: 50px;
+    background-color: #025add;
+    color: whitesmoke;
+}
+
+/*-------------------------------------------*/
+.imagen-container {
+    /* position: relative;    /* To position the text over the image */
+    display: flex;
+    width: 100%;
+    min-width: 800px;
+}
+
+/* Image styles */
+.imagen-container img {
+    width: 100%;
+    height: auto;
+    min-width: 800px;
+}
+
+/* Text styles */
+.titulo-imagen {
+    position: absolute;
+    top: 150px;
+    right: 150px;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+.subtitulo-imagen {
+    position: absolute;
+    top: 190px;
+    right: 150px;
+    color: #025add;
+    font-size: 2em;
+    font-weight:normal;
+    font-family: 'Poppins', sans-serif;
+}
+.texto-imagen {
+    position: absolute;
+    top: 230px;
+    right: 150px;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*------------------------------------------------------*/
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 100%;
+    padding: 60px;
+}
+
+.service-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 250px;/* para que las tarjetas no sean muy angostas*/
+}
+
+/* Service Card Hover Effect */
+.service-card:hover {
+    transform: scale(1.2);/* efecto agrandar*/
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Style */
+.service-card .icon {
+    font-size: 60px;
+    color: #025add;
+    margin-bottom: 15px;
+}
+
+/* Title Style */
+.service-card h3 {
+    font-size: 20px;
+    color: #025add;
+    margin: 0 0 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Text Style */
+.service-card p {
+    font-size: 14px;
+    color: #3a3a3a;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
