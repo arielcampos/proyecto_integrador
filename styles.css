@@ -1,3 +1,9 @@
+body 
+{
+    margin:0px;
+    font-family: 'Poppins', sans-serif;
+}
+
 .header {
     width: 100%;
     background-color: whitesmoke;
@@ -10,7 +16,7 @@
 
 .menu {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     padding: 8px 0;
@@ -32,6 +38,12 @@
     margin: 0;
     font-family: 'Poppins', sans-serif;
     flex-wrap: wrap; /*ajusta el menu, pero se baja y se mezcla con la imagen*/
+    font-weight: bold;
+}
+
+.nav ul :hover {
+    color:#025add;
+    text-decoration: underline;
 }
 
 li {
@@ -50,9 +62,40 @@ li {
 }
 
 /*-------------------------------------------*/
+
+@keyframes desplazarArriba {
+    0% {
+        bottom: 45%; /* Comienza abajo */
+    }
+    100% {
+        bottom: 65%; /* Se mueve hasta la parte superior de la pantalla */
+    }
+}
+
+@keyframes desplazarArriba2 {
+    0% {
+        bottom: 35%; /* Comienza abajo */
+    }
+    100% {
+        bottom: 60%; /* Se mueve hasta la parte superior de la pantalla */
+    }
+}
+
+@keyframes desplazarArriba3 {
+    0% {
+        bottom: 25%; /* Comienza abajo */
+    }
+    100% {
+        bottom: 55%; /* Se mueve hasta la parte superior de la pantalla */
+    }
+}
+
+
+/*-------------------------------------------*/
+
 .imagen-container {
     /* position: relative;    /* To position the text over the image */
-    display: flex;
+    /* display: flex; */
     width: 100%;
     min-width: 800px;
 }
@@ -67,35 +110,35 @@ li {
 /* Text styles */
 .titulo-imagen {
     position: absolute;
-    top: 30%;
     left: 50%;
     color: white;
-    font-size: 2em;
+    font-size: 40px;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
+    animation : desplazarArriba 1s linear forwards ;
 }
 .subtitulo-imagen {
     position: absolute;
-    top: 40%;
     left: 50%;
     color: #025add;
-    font-size: 2em;
-    font-weight:normal;
+    font-size: 40px;
+    font-weight: bold;
     font-family: 'Poppins', sans-serif;
+    animation : desplazarArriba2 1s linear forwards;
 }
 .texto-imagen {
     position: absolute;
-    top: 50%;
     left: 50%;
     color: white;
     font-size: 1em;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
+    animation : desplazarArriba3 1s linear forwards;
 }
 
 /*------------------------------------------------------*/
 
-.services-container {
+.servicios-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -104,7 +147,7 @@ li {
     padding: 60px;
 }
 
-.service-card {
+.servicios-card {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
@@ -115,31 +158,143 @@ li {
     min-width: 250px;/* para que las tarjetas no sean muy angostas*/
 }
 
-/* Service Card Hover Effect */
-.service-card:hover {
-    transform: scale(1.2);/* efecto agrandar*/
+/* Hover  */
+.servicios-card:hover {
+    transform: scale(1.1);/* efecto agrandar*/
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Icon Style */
-.service-card .icon {
+.servicios-titulo h2{
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    color: #025add;
+    margin-bottom: 0.5rem;
+    animation: slideUp 0.6s ease-out forwards; /* Aplicamos la animación */
+}
+
+.servicios-subtitulo p{
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: #b8651d;
+    margin-bottom: 0.5rem;
+    animation: slideUp 0.6s ease-out forwards; /* Aplicamos la animación */
+}
+/*-------------------------------------------*/
+
+/* Definir la animación */
+@keyframes slideUp {
+    0% {
+        transform: translateY(60px); /* Comienza desde abajo */
+        opacity: 0; /* Comienza invisible */
+    }
+    100% {
+        transform: translateY(0); /* Llega a su posición original */
+        opacity: 1; /* Se hace completamente visible */
+    }
+}
+
+/* Icono */
+.servicios-card .icon {
     font-size: 60px;
     color: #025add;
     margin-bottom: 15px;
+    animation: slideUp 0.6s ease-out forwards; /* Aplicamos la animación */
 }
 
-/* Title Style */
-.service-card h3 {
+/* Titulo */
+.servicios-card h3 {
     font-size: 20px;
     color: #025add;
     margin: 0 0 10px;
     font-family: 'Poppins', sans-serif;
+    animation: slideUp 0.6s ease-out 0.2s forwards; /* Aplicamos la animación con un retraso */
 }
 
-/* Text Style */
-.service-card p {
+/* Texto */
+.servicios-card p {
     font-size: 14px;
     color: #3a3a3a;
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    animation: slideUp 0.6s ease-out 0.4s forwards; /* Aplicamos la animación con un retraso */
+}
+/*-------------------------------------------*/
+/* Para Portfolio */
+/*-------------------------------------------*/
+.portfolio-card img {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    border-radius: 10px;
+    animation: slideUp 0.6s ease-out 0.6s forwards; /* Aplicamos la animación con un retraso */
+    
+}
+
+.portfolio-card {
+    background-color: #ffffff;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    text-align: center;
+    padding: 0px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 250px;/* para que las tarjetas no sean muy angostas*/
+}
+.portfolio-card:hover {
+    transform: scale(1.1);/* efecto agrandar*/
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+}
+
+/*--------------------------------------------------*/
+
+
+
+.container1 
+{
+    width: 33.33%;
+    padding-left: 4em;
+}
+
+.container1 h4 
+{
+   font-size: 18px;
+   margin : 3px;
+
+}
+.container1 p 
+{
+   font-size: 14px;
+   margin : 3px;
+}
+
+.contact-info {
+    padding-bottom: 1em;
+}
+
+.container2
+{
+    width: 50%;
+}
+
+
+/* Estilo básico para cada fila */
+.form-row {
+    margin-bottom: 15px; /* Espacio entre las filas */
+}
+/* Estilo para los elementos de formulario */
+label {
+    display: block; /* Para que la etiqueta esté en una línea separada */
+    margin-bottom: 5px;
+}
+input, select {
+    width: 100%; /* Asegura que los campos ocupen todo el ancho disponible */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
