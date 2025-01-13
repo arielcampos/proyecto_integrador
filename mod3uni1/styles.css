@@ -1,0 +1,377 @@
+body 
+{
+    margin:0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    width: 100%;
+    background-color: whitesmoke;
+    height: 90px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;/* Para que este arriba del resto*/
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 8px 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    font-weight: normal;
+}
+
+.nav ul {
+    list-style: none; /*remueve los puntos*/
+    display: flex;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    flex-wrap: wrap; /*ajusta el menu, pero se baja y se mezcla con la imagen*/
+    font-weight: bold;
+}
+
+
+a:link {
+    color:#3a3a3a;
+    text-decoration: none;
+}
+
+a:visited {
+    color:#3a3a3a;
+    text-decoration: none;
+}
+a:hover {
+    color:#025add;
+    text-decoration: none;
+}
+
+
+li {
+    padding: 0 20px;
+}
+
+
+.boton a:visited {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    margin-left: 20px;
+    border-radius: 50px;
+    background-color: #025add;
+    color: whitesmoke;
+    border: solid 1px #025add;
+}
+.boton a:link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    margin-left: 20px;
+    border-radius: 50px;
+    background-color: #025add;
+    color: whitesmoke;
+    border: solid 1px #025add;
+}
+
+
+.boton a:hover {
+    background-color: whitesmoke;
+    color: #025add;
+    border: solid 1px #025add;
+}
+/*-------------------------------------------*/
+/*-----Animaciones de la imagen principal 
+---------------------------------------------*/
+
+@keyframes desplazarArriba {
+    0% {
+        bottom: 45%; /* Comienza abajo */
+    }
+    100% {
+        bottom: 65%; /* Se mueve hasta la parte superior de la pantalla */
+    }
+}
+
+@keyframes desplazarArriba2 {
+    0% {
+        bottom: 35%; /* Comienza abajo */
+    }
+    100% {
+        bottom: 60%; /* Se mueve hasta la parte superior de la pantalla */
+    }
+}
+
+@keyframes desplazarArriba3 {
+    0% {
+        bottom: 25%; /* Comienza abajo */
+    }
+    100% {
+        bottom: 55%; /* Se mueve hasta la parte superior de la pantalla */
+    }
+}
+
+
+/*-------------------------------------------*/
+/*--Imagen Principal -----------------------------------------*/
+
+
+.imagen-container {
+    /* position: relative;    /* To position the text over the image */
+    /* display: flex; */
+    width: 100%;
+    min-width: 800px;
+}
+
+/* Image styles */
+.imagen-container img {
+    width: 100%;
+    height: auto;
+    min-width: 800px;
+}
+
+/* Text styles */
+.titulo-imagen {
+    position: absolute;
+    left: 50%;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    animation : desplazarArriba 1s linear forwards ;
+}
+.subtitulo-imagen {
+    position: absolute;
+    left: 50%;
+    color: #025add;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    animation : desplazarArriba2 1s linear forwards;
+}
+.texto-imagen {
+    position: absolute;
+    left: 50%;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    animation : desplazarArriba3 1s linear forwards;
+}
+
+/*------------------------------------------------------*/
+/*--Seccion de servicios -----------------------------------------*/
+
+#servicios
+{
+    padding-top: 2em;
+}
+.servicios-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 100%;
+    padding: 60px;
+}
+
+.servicios-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 250px;/* para que las tarjetas no sean muy angostas*/
+}
+
+/* Hover  */
+.servicios-card:hover {
+    transform: scale(1.1);/* efecto agrandar*/
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.servicios-titulo h2{
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    color: #025add;
+    margin-bottom: 0.5rem;
+    animation: slideUp 0.6s ease-out forwards; /* Aplicamos la animación */
+}
+
+.servicios-subtitulo p{
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: #b8651d;
+    margin-bottom: 0.5rem;
+    animation: slideUp 0.6s ease-out forwards; /* Aplicamos la animación */
+}
+/*-------------------------------------------*/
+/*-Animacion de servicios 
+------------------------------------------*/
+
+
+/* Definir la animación */
+@keyframes slideUp {
+    0% {
+        transform: translateY(60px); /* Comienza desde abajo */
+        opacity: 0; /* Comienza invisible */
+    }
+    100% {
+        transform: translateY(0); /* Llega a su posición original */
+        opacity: 1; /* Se hace completamente visible */
+    }
+}
+
+/* Icono */
+.servicios-card .icon {
+    font-size: 60px;
+    color: #025add;
+    margin-bottom: 15px;
+    animation: slideUp 0.6s ease-out forwards; /* Aplicamos la animación */
+}
+
+/* Titulo */
+.servicios-card h3 {
+    font-size: 20px;
+    color: #025add;
+    margin: 0 0 10px;
+    font-family: 'Poppins', sans-serif;
+    animation: slideUp 0.6s ease-out 0.2s forwards; /* Aplicamos la animación con un retraso */
+}
+
+/* Texto */
+.servicios-card p {
+    font-size: 14px;
+    color: #3a3a3a;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    animation: slideUp 0.6s ease-out 0.4s forwards; /* Aplicamos la animación con un retraso */
+}
+/*-------------------------------------------*/
+/* Seccion Portfolio */
+/*-------------------------------------------*/
+
+
+.portfolio-card {
+    width: 25%; /* Ancho fijo */
+    height: auto; /* Alto fijo */
+    overflow: hidden; /* Oculta el desbordamiento */
+    position: relative; /* Para manejar el contenido interno */
+    border: 0.5px solid #ccc; /* Opcional: Borde del contenedor */
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-card img {
+    width: 100%; /* Tamaño inicial */
+    height: 100%; /* Tamaño inicial */
+    object-fit: cover; /* Asegura que la imagen cubra el área */
+    transition: transform 0.5s ease; /* Suaviza la animación */
+    
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.2); /* Escala la imagen */
+}
+
+/*-------------------------------------------*/
+/* Seccion Contacto 
+/*-------------------------------------------*/
+
+.container1 
+{
+    width: 15%;
+    padding-left: 4em;
+}
+
+.container1 h4 
+{
+   font-size: 18px;
+   margin : 3px;
+
+}
+.container1 p 
+{
+   font-size: 14px;
+   margin : 3px;
+}
+
+.contact-info {
+    padding-bottom: 1em;
+}
+
+.container2
+{
+    width: 60%;
+}
+
+
+/* Estilo básico para cada fila */
+.form-row {
+    margin-bottom: 15px; /* Espacio entre las filas */
+}
+/* Estilo para los elementos de formulario */
+label {
+    display: block; /* Para que la etiqueta esté en una línea separada */
+    margin-bottom: 5px;
+}
+input, select {
+    width: 80%; /* Asegura que los campos ocupen el ancho  */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+#message {
+    width: 80%;
+    background-color: #f8f8f8;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    margin-left: 20px;
+    border-radius: 50px;
+    background-color: #025add;
+    color: whitesmoke;
+    border-width: 0px;
+}
+
+button:hover {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    background-color: #025add;
+    color: #ccc;
+}
