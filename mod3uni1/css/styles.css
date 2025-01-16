@@ -164,7 +164,7 @@ li {
     position: absolute;
     left: 50%;
     color: white;
-    font-size: 40px;
+    font-size: 2.7rem;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
     animation: desplazarArriba 1s linear forwards;
@@ -174,7 +174,7 @@ li {
     position: absolute;
     left: 50%;
     color: #025add;
-    font-size: 40px;
+    font-size: 1.5em;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
     animation: desplazarArriba2 1s linear forwards;
@@ -492,7 +492,7 @@ button:hover {
 }
 
 /*-----------------------------------------*/
-/* ajustes para mobile
+/* ajustes para tablet y celular
 /*-----------------------------------------*/
 @media only screen and (max-width:768px) {
     .nav {
@@ -543,7 +543,7 @@ button:hover {
         position: absolute;
         left: 60%;
         color: white;
-        font-size: 22px;
+        font-size: 18px;
         font-weight: bold;
         font-family: 'Poppins', sans-serif;
         animation: desplazarArriba 1s linear forwards;
@@ -575,5 +575,36 @@ button:hover {
 
     .boton a:link {
         padding :5px 10px;
+    }
+
+    .container1 p {
+        font-size: 10px;
+        margin: 1px;
+    }
+}
+
+@media only screen and (max-width:1400px) {
+
+    .subtitulo-imagen{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width:1013px) {
+
+    .subtitulo-imagen{
+        display: none;
+    }
+
+    .titulo-imagen {
+        font-size: 2em;
+    }
+
+    .texto-imagen {
+        font-size: 0.8em;
+    }
+    .texto-imagen2 {
+        font-size: 0.8em;
     }
 }
