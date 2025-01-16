@@ -142,26 +142,34 @@ li {
     }
 }
 
+@keyframes desplazarArriba4 {
+    0% {
+        bottom: 15%;
+        /* Comienza abajo */
+    }
+
+    100% {
+        bottom: 40%;
+        /* Se mueve hasta la parte superior de la pantalla */
+    }
+}
 
 /*-------------------------------------------*/
-/*--Imagen Principal -----------------------------------------*/
-
-
+/*--Imagen Principal -*/
+/* ----------------------------------------*/
 .imagen-container {
-    /* position: relative;    /* To position the text over the image */
-    /* display: flex; */
     width: 100%;
     min-width: 800px;
 }
 
-/* Image styles */
+
 .imagen-container img {
     width: 100%;
     height: auto;
     min-width: 800px;
 }
 
-/* Text styles */
+
 .titulo-imagen {
     position: absolute;
     left: 50%;
@@ -192,18 +200,28 @@ li {
     animation: desplazarArriba3 1s linear forwards;
 }
 
+.texto-imagen2 {
+    position: absolute;
+    left: 50%;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    animation: desplazarArriba4 1s linear forwards;
+}
+
 /*------------------------------------------------------*/
 
 .descripcion-container {
     justify-content: center;
     align-items: center;
-    padding : 2em;
+    padding: 2em;
 }
 
 .descripcion {
     width: 100%;
     height: 50px;
-    padding : 2em;
+    padding: 2em;
     background-color: #025add;
     text-align: center;
     display: flex;
@@ -215,7 +233,7 @@ li {
 .descripcion2 {
     width: 100%;
     height: 150px;
-    padding : 2em;
+    padding: 2em;
     background-color: whitesmoke;
     text-align: center;
     display: flex;
@@ -372,13 +390,31 @@ li {
     /* Escala la imagen */
 }
 
+.texto-en-imagen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+
+}
+
 /*-------------------------------------------*/
 /* Seccion Contacto 
 /*-------------------------------------------*/
 
+.form-container {
+    width: 80%;
+    display: flex;
+}
+
 .container1 {
-    width: 15%;
     padding-left: 4em;
+    width: 30%;
 }
 
 .container1 h4 {
@@ -398,6 +434,7 @@ li {
 
 .container2 {
     width: 60%;
+
 }
 
 
@@ -471,6 +508,7 @@ button:hover {
 
 .footer-container {
     max-width: 1200px;
+    height: 15em;
     margin: 0 auto;
 }
 
@@ -483,4 +521,91 @@ button:hover {
 
 .social-icons a:hover {
     text-decoration: underline;
+}
+
+/*-----------------------------------------*/
+/* ajustes para mobile
+/*-----------------------------------------*/
+@media only screen and (max-width:768px) {
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        padding: 0;
+        font-weight: normal;
+        font-size: 0.9em;
+
+    }
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content:space-evenly ;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 8px 0;
+        margin : 0px;
+    }
+  
+ 
+    .nav ul {
+        list-style: none;
+        font-weight: bold;
+
+    }
+
+   img {
+    margin-bottom:20px;
+   }
+    .imagen-container {
+        width: 100%;
+        min-width: 800px;
+
+    }
+    
+    
+    .imagen-container img {
+        width: 100%;
+        height: auto;
+        min-width: 800px;
+        min-height: 370px;
+    }
+    
+
+    .titulo-imagen {
+        position: absolute;
+        left: 60%;
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif;
+        animation: desplazarArriba 1s linear forwards;
+    }
+
+    .subtitulo-imagen {
+        display: none;
+    }
+
+    .texto-imagen {
+        position: absolute;
+        left: 50%;
+        color: white;
+        font-size: 0.7em;
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif;
+        animation: desplazarArriba3 1s linear forwards;
+    }
+
+    .texto-imagen2 {
+        position: absolute;
+        left: 50%;
+        color: white;
+        font-size: 0.7em;
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif;
+        animation: desplazarArriba4 1s linear forwards;
+    }
+
+    .boton a:link {
+        padding :5px 10px;
+    }
 }
