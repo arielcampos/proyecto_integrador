@@ -385,8 +385,8 @@ li {
 }
 
 .container1 {
-    padding-left: 4em;
-    width: 30%;
+    padding-left: 0.5em;
+    width: 35%;
 }
 
 .container1 h4 {
@@ -433,7 +433,7 @@ select {
 }
 
 #message {
-    width: 80%;
+    width: 100%;
     background-color: #f8f8f8;
     padding: 8px;
     border: 1px solid #ccc;
