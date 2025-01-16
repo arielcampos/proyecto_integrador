@@ -33,13 +33,11 @@ body {
 
 .nav ul {
     list-style: none;
-    /*remueve los puntos*/
     display: flex;
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
     flex-wrap: wrap;
-    /*ajusta el menu, pero se baja y se mezcla con la imagen*/
     font-weight: bold;
 }
 
@@ -103,54 +101,46 @@ li {
 }
 
 /*-------------------------------------------*/
-/*-----Animaciones de la imagen principal 
----------------------------------------------*/
+/*-----Animaciones de la imagen principal    */
+/*---------------------------------------------*/
 
 @keyframes desplazarArriba {
     0% {
         bottom: 45%;
-        /* Comienza abajo */
     }
 
     100% {
         bottom: 65%;
-        /* Se mueve hasta la parte superior de la pantalla */
     }
 }
 
 @keyframes desplazarArriba2 {
     0% {
         bottom: 35%;
-        /* Comienza abajo */
     }
 
     100% {
         bottom: 60%;
-        /* Se mueve hasta la parte superior de la pantalla */
     }
 }
 
 @keyframes desplazarArriba3 {
     0% {
         bottom: 25%;
-        /* Comienza abajo */
     }
 
     100% {
         bottom: 55%;
-        /* Se mueve hasta la parte superior de la pantalla */
     }
 }
 
 @keyframes desplazarArriba4 {
     0% {
         bottom: 15%;
-        /* Comienza abajo */
     }
 
     100% {
         bottom: 40%;
-        /* Se mueve hasta la parte superior de la pantalla */
     }
 }
 
@@ -266,13 +256,11 @@ li {
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     min-width: 250px;
-    /* para que las tarjetas no sean muy angostas*/
 }
 
 /* Hover  */
 .servicios-card:hover {
     transform: scale(1.1);
-    /* efecto agrandar*/
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -285,7 +273,6 @@ li {
     color: #025add;
     margin-bottom: 0.5rem;
     animation: slideUp 0.6s ease-out forwards;
-    /* Aplicamos la animación */
 }
 
 .servicios-subtitulo p {
@@ -297,7 +284,6 @@ li {
     color: #b8651d;
     margin-bottom: 0.5rem;
     animation: slideUp 0.6s ease-out forwards;
-    /* Aplicamos la animación */
 }
 
 /*-------------------------------------------*/
@@ -309,16 +295,12 @@ li {
 @keyframes slideUp {
     0% {
         transform: translateY(60px);
-        /* Comienza desde abajo */
         opacity: 0;
-        /* Comienza invisible */
     }
 
     100% {
         transform: translateY(0);
-        /* Llega a su posición original */
         opacity: 1;
-        /* Se hace completamente visible */
     }
 }
 
@@ -358,15 +340,10 @@ li {
 
 .portfolio-card {
     width: 25%;
-    /* Ancho fijo */
     height: auto;
-    /* Alto fijo */
     overflow: hidden;
-    /* Oculta el desbordamiento */
     position: relative;
-    /* Para manejar el contenido interno */
     border: 0.5px solid #ccc;
-    /* Opcional: Borde del contenedor */
     border-radius: 5%;
     display: flex;
     justify-content: center;
@@ -375,19 +352,14 @@ li {
 
 .portfolio-card img {
     width: 100%;
-    /* Tamaño inicial */
     height: 100%;
-    /* Tamaño inicial */
     object-fit: cover;
-    /* Asegura que la imagen cubra el área */
     transition: transform 0.5s ease;
-    /* Suaviza la animación */
 
 }
 
 .portfolio-card:hover img {
     transform: scale(1.2);
-    /* Escala la imagen */
 }
 
 .texto-en-imagen {
@@ -441,20 +413,17 @@ li {
 /* Estilo básico para cada fila */
 .form-row {
     margin-bottom: 15px;
-    /* Espacio entre las filas */
 }
 
 /* Estilo para los elementos de formulario */
 label {
     display: block;
-    /* Para que la etiqueta esté en una línea separada */
     margin-bottom: 5px;
 }
 
 input,
 select {
     width: 80%;
-    /* Asegura que los campos ocupen el ancho  */
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -501,7 +470,6 @@ button:hover {
     color: white;
     text-align: center;
     padding: 40px;
-    /* position: fixed; */
     bottom: 0;
     width: 100%;
 }
